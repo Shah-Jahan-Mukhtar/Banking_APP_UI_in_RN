@@ -1,9 +1,23 @@
 import { View, Text, Image } from "react-native";
 import React from "react";
 import Icon from "react-native-vector-icons/FontAwesome";
+import Item from "../components/Item";
 
 const COLORS = { fill: "#414A61", TextColor: "#F9F9F9" };
 
+const ITEMS1 = {
+  visa: "Visa Card",
+  code: "**3245",
+  price: "2200$",
+  date: "01/24",
+};
+
+const ITEMS2 = {
+  grocery: "Grocery",
+  price: "-$400",
+  isco: "IESCO",
+  price2: "-$120",
+};
 const Home = () => {
   return (
     <View
@@ -151,16 +165,40 @@ const Home = () => {
             View All
           </Text>
         </View>
+        <Item
+          name={ITEMS1.visa}
+          code={ITEMS1.code}
+          prices={ITEMS1.price}
+          date={ITEMS1.date}
+        />
         <View
           style={{
-            width: 325,
-            height: 178,
-            backgroundColor: "#292929",
-            borderRadius: 20,
+            flexDirection: "row",
+
             marginTop: 10,
-            marginLeft: 17,
+            marginLeft: "8%",
           }}
-        ></View>
+        >
+          <Text style={{ color: "#EEEEEE", fontWeight: "bold" }}>My Cards</Text>
+          <Text
+            style={{
+              color: "#EEEEEE",
+              fontSize: 13,
+              fontWeight: "bold",
+              marginLeft: "60%",
+              borderBottomWidth: 0.5,
+              borderColor: "#EEEEEE",
+            }}
+          >
+            View All
+          </Text>
+        </View>
+        <Item
+          name={ITEMS2.visa}
+          code={ITEMS2.code}
+          prices={ITEMS2.price}
+          date={ITEMS2.date}
+        />
       </View>
     </View>
   );
