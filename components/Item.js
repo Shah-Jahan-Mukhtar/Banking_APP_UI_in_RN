@@ -3,77 +3,81 @@ import React from "react";
 
 const Item = (props) => {
   return (
-    <View
-      style={{
-        width: 325,
-        height: 178,
-        backgroundColor: "#292929",
-        borderRadius: 20,
-        marginTop: 10,
-        marginLeft: 17,
-      }}
-    >
+    <View>
       <View
         style={{
-          height: "50%",
-          width: "100%",
-          borderBottomWidth: 0.5,
-          borderColor: "#EEEEEE",
+          width: 325,
+          height: 178,
+          backgroundColor: "#292929",
+          borderRadius: 20,
+          marginTop: 10,
+          marginLeft: 17,
         }}
       >
         <View
           style={{
-            flexDirection: "row",
-            alignItems: "center",
-            padding: 20,
-            justifyContent: "space-around",
+            height: "50%",
+            width: "100%",
+            borderBottomWidth: 0.5,
+            borderColor: "#EEEEEE",
           }}
         >
-          <Image
-            source={require("../assets/VisaCard.jpg")}
-            style={{ width: 50, height: 50, borderRadius: 50 }}
-          />
-          <View style={{ marginLeft: 10 }}>
-            <Text style={{ color: "#fff", fontWeight: "bold" }}>
-              {props.name}
-            </Text>
-            <Text style={{ color: "#EEEEEE" }}>{props.code}</Text>
-          </View>
-          <View style={{ marginLeft: "45%" }}>
-            <Text style={{ color: "#fff", fontWeight: "bold" }}>
-              {props.prices}
-            </Text>
-            <Text style={{ color: "#EEEEEE" }}>{props.date}</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              padding: 20,
+              justifyContent: "space-around",
+            }}
+          >
+            <Image
+              source={require("../assets/VisaCard.jpg")}
+              style={{ width: 50, height: 50, borderRadius: 50 }}
+            />
+            <View style={{ marginLeft: 10 }}>
+              <Text style={{ color: "#fff", fontWeight: "bold" }}>
+                {props.name}
+              </Text>
+              <Text style={{ color: "#EEEEEE" }}>{props.code}</Text>
+            </View>
+            <View style={{ marginLeft: "45%" }}>
+              <Text style={{ color: "#fff", fontWeight: "bold" }}>
+                {props.prices}
+              </Text>
+              <Text style={{ color: "#EEEEEE" }}>{props.date}</Text>
+            </View>
           </View>
         </View>
-      </View>
-      <View
-        style={{
-          height: "50%",
-          width: "100%",
-        }}
-      >
         <View
           style={{
-            flexDirection: "row",
-            alignItems: "center",
-            padding: 20,
-            justifyContent: "space-between",
+            height: "50%",
+            width: "100%",
           }}
         >
-          <Image
-            source={require("../assets/masterCard.jpg")}
-            style={{ width: 50, height: 50, borderRadius: 50 }}
-          />
-          <View style={{ marginLeft: 8 }}>
-            <Text style={{ color: "#fff", fontWeight: "bold" }}>
-              Master Card
-            </Text>
-            <Text style={{ color: "#EEEEEE" }}>**6539</Text>
-          </View>
-          <View style={{ marginLeft: "42%" }}>
-            <Text style={{ color: "#fff", fontWeight: "bold" }}>650$</Text>
-            <Text style={{ color: "#EEEEEE" }}>04/23</Text>
+          <View
+            style={{
+              flexDirection: "row",
+              alignItems: "center",
+              padding: 20,
+              justifyContent: "space-between",
+            }}
+          >
+            <Image
+              source={require("../assets/masterCard.jpg")}
+              style={{ width: 50, height: 50, borderRadius: 50 }}
+            />
+            <View style={{ marginLeft: 8 }}>
+              <Text style={{ color: "#fff", fontWeight: "bold" }}>
+                {props.name2}
+              </Text>
+              <Text style={{ color: "#EEEEEE" }}>{props.code2}</Text>
+            </View>
+            <View style={{ marginLeft: "42%" }}>
+              <Text style={{ color: "#EEEEEE", fontWeight: "bold" }}>
+                {props.prices2}
+              </Text>
+              <Text style={{ color: "#EEEEEE" }}>{props.date2}</Text>
+            </View>
           </View>
         </View>
       </View>

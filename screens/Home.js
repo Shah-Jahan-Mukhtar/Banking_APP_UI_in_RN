@@ -10,12 +10,16 @@ const ITEMS1 = {
   code: "**3245",
   price: "2200$",
   date: "01/24",
+  master: "Master Card",
+  code2: "**6539",
+  price2: "650$",
+  date2: "01/23",
 };
 
 const ITEMS2 = {
   grocery: "Grocery",
   price: "-$400",
-  isco: "IESCO",
+  isco: "IESCO Bill ",
   price2: "-$120",
 };
 const Home = () => {
@@ -170,6 +174,10 @@ const Home = () => {
           code={ITEMS1.code}
           prices={ITEMS1.price}
           date={ITEMS1.date}
+          name2={ITEMS1.master}
+          code2={ITEMS1.code2}
+          prices2={ITEMS1.price2}
+          date2={ITEMS1.date2}
         />
         <View
           style={{
@@ -179,13 +187,15 @@ const Home = () => {
             marginLeft: "8%",
           }}
         >
-          <Text style={{ color: "#EEEEEE", fontWeight: "bold" }}>My Cards</Text>
+          <Text style={{ color: "#EEEEEE", fontWeight: "bold" }}>
+            Recent Transactions
+          </Text>
           <Text
             style={{
               color: "#EEEEEE",
               fontSize: 13,
               fontWeight: "bold",
-              marginLeft: "60%",
+              marginLeft: "40%",
               borderBottomWidth: 0.5,
               borderColor: "#EEEEEE",
             }}
@@ -193,12 +203,12 @@ const Home = () => {
             View All
           </Text>
         </View>
-        <Item
-          name={ITEMS2.visa}
-          code={ITEMS2.code}
-          prices={ITEMS2.price}
-          date={ITEMS2.date}
-        />
+        {/* <Item
+          name1={ITEMS2.grocery}
+          code1={ITEMS2.price}
+          prices1={ITEMS2.isco}
+          date1={ITEMS2.price2}
+        /> */}
       </View>
     </View>
   );
