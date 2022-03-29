@@ -31,7 +31,7 @@ const Item = (props) => {
             }}
           >
             <Image
-              source={require("../assets/VisaCard.jpg")}
+              source={props.img1}
               style={{ width: 50, height: 50, borderRadius: 50 }}
             />
             <View style={{ marginLeft: 10 }}>
@@ -42,7 +42,7 @@ const Item = (props) => {
             </View>
             <View style={{ marginLeft: "45%" }}>
               <Text style={{ color: "#fff", fontWeight: "bold" }}>
-                {props.prices}
+                {props.price}
               </Text>
               <Text style={{ color: "#EEEEEE" }}>{props.date}</Text>
             </View>
@@ -74,7 +74,7 @@ const Item = (props) => {
             </View>
             <View style={{ marginLeft: "42%" }}>
               <Text style={{ color: "#EEEEEE", fontWeight: "bold" }}>
-                {props.prices2}
+                {props.price2}
               </Text>
               <Text style={{ color: "#EEEEEE" }}>{props.date2}</Text>
             </View>

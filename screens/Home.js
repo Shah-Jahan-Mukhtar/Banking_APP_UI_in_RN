@@ -5,23 +5,24 @@ import Item from "../components/Item";
 
 const COLORS = { fill: "#414A61", TextColor: "#F9F9F9" };
 
-const ITEMS1 = {
-  visa: "Visa Card",
-  code: "**3245",
-  price: "2200$",
-  date: "01/24",
-  master: "Master Card",
-  code2: "**6539",
-  price2: "650$",
-  date2: "01/23",
-};
+const ITEMS1 = [
+  {
+    visa: "Visa Card",
+    code: "**3245",
+    price: "2200$",
+    date: "01/24",
+    master: "Master Card",
+    code1: "**6539",
+    price1: "650$",
+    date1: "01/23",
+    uri1: "../assets/VisaCard.jpg",
+    uri2: "../assets/MasterCard.jpg",
+  },
+];
 
-const ITEMS2 = {
-  grocery: "Grocery",
-  price: "-$400",
-  isco: "IESCO Bill ",
-  price2: "-$120",
-};
+const ITEMS2 = [
+  { grocery: "Grocery", price: "-$400", isco: "IESCO Bill ", price2: "-$120" },
+];
 const Home = () => {
   return (
     <View
@@ -57,7 +58,7 @@ const Home = () => {
           color: COLORS.TextColor,
           fontSize: 25,
           fontWeight: "bold",
-          marginTop: 20,
+          marginTop: "2%",
         }}
       >
         $8640.00
@@ -68,7 +69,7 @@ const Home = () => {
           backgroundColor: "#000000",
           width: "100%",
           height: "100%",
-          marginTop: "6%",
+          marginTop: "2%",
           borderTopLeftRadius: 50,
           borderTopRightRadius: 50,
           //   alignItems: "center",
@@ -169,16 +170,24 @@ const Home = () => {
             View All
           </Text>
         </View>
-        <Item
-          name={ITEMS1.visa}
-          code={ITEMS1.code}
-          prices={ITEMS1.price}
-          date={ITEMS1.date}
-          name2={ITEMS1.master}
-          code2={ITEMS1.code2}
-          prices2={ITEMS1.price2}
-          date2={ITEMS1.date2}
-        />
+
+        {ITEMS1.map((item, index) => {
+          return (
+            <Item
+              name={item.visa}
+              img1={item.uri1}
+              code={item.code}
+              price={item.price}
+              date={item.date}
+              name2={item.master}
+              code2={item.code1}
+              price2={item.price1}
+              date2={item.date1}
+              key={index}
+            />
+          );
+        })}
+
         <View
           style={{
             flexDirection: "row",
@@ -203,12 +212,17 @@ const Home = () => {
             View All
           </Text>
         </View>
-        {/* <Item
-          name1={ITEMS2.grocery}
-          code1={ITEMS2.price}
-          prices1={ITEMS2.isco}
-          date1={ITEMS2.price2}
-        /> */}
+        {ITEMS2.map((item, index) => {
+          return (
+            <Item
+              key={index}
+              name={item.grocery}
+              price={item.price}
+              name2={item.isco}
+              price2={item.price2}
+            />
+          );
+        })}
       </View>
     </View>
   );
