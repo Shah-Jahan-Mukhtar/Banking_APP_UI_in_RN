@@ -34,7 +34,7 @@ const Item = (props) => {
               source={props.img1}
               style={{ width: 50, height: 50, borderRadius: 50 }}
             />
-            <View style={{ marginLeft: 10 }}>
+            <View style={{ marginLeft: 10, alignItems: "center" }}>
               <Text style={{ color: "#fff", fontWeight: "bold" }}>
                 {props.name}
               </Text>
@@ -63,7 +63,7 @@ const Item = (props) => {
             }}
           >
             <Image
-              source={require("../assets/masterCard.jpg")}
+              source={props.img2}
               style={{ width: 50, height: 50, borderRadius: 50 }}
             />
             <View style={{ marginLeft: 8 }}>
