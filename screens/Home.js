@@ -36,13 +36,12 @@ const Home = () => {
       style={{
         flex: 1,
         backgroundColor: COLORS.fill,
-        alignItems: "center",
       }}
     >
       <View
         style={{
           alignItems: "center",
-          marginBottom: 50,
+          marginBottom: 60,
         }}
       >
         <View

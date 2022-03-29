@@ -12,7 +12,6 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={{
-          tabBarStyle: { position: "absolute" },
           headerShown: false,
         }}
       >
