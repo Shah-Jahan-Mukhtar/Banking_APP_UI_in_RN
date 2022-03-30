@@ -83,9 +83,9 @@ const MyCards = () => {
             <View
               style={{
                 backgroundColor: "#BECAF5",
-                width: 12,
-                height: 12,
-                borderRadius: 10,
+                width: 15,
+                height: 15,
+                borderRadius: 12,
                 marginLeft: 3,
                 marginRight: 3,
                 marginTop: 15,

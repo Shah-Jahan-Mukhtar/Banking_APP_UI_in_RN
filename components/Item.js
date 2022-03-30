@@ -6,7 +6,7 @@ const Item = (props) => {
     <View>
       <View
         style={{
-          width: 325,
+          width: "90%",
           height: 178,
           backgroundColor: "#292929",
           borderRadius: 20,

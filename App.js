@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Home from "./screens/Home";
 import MyCards from "./screens/MyCards";
+import ViewStatement from "./components/ViewStatement";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
@@ -10,7 +11,7 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return (
     // <Home />
-    <MyCards />
+    <ViewStatement />
     // <NavigationContainer>
     //   <Tab.Navigator
     //     screenOptions={{
